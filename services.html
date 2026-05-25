@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Fika Design Co.</title>
+<meta name="description" content="Fika Design Co. offers product design, design engineering, content design, UX writing, and context engineering for digital products. Based in Sweden." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script>
+  (function(){
+    var url = 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap';
+    function inject(text){ var s = document.createElement('style'); s.id = 'gfonts'; s.textContent = text; document.head.appendChild(s); }
+    function tryFetch(attempt){ fetch(url, { mode: 'cors' }).then(function(r){ if (!r.ok) throw new Error(r.status); return r.text(); }).then(inject).catch(function(){ if (attempt < 3) setTimeout(function(){ tryFetch(attempt + 1); }, 400 * attempt); }); }
+    tryFetch(1);
+  })();
+</script>
+<link rel="stylesheet" href="assets/colors_and_type.css" />
+<link rel="stylesheet" href="assets/site.css" />
+<link rel="stylesheet" href="assets/site-fika.css" />
+<link rel="icon" href="assets/FikaLogo.svg" type="image/svg+xml" />
+<style>html, body { overflow-x: clip; }</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body data-motion="bold">
+<div id="root"></div>
+
+<script type="text/babel" src="src/hooks.jsx"></script>
+<script type="text/babel" src="src/nav.jsx"></script>
+<script type="text/babel" src="src/footer.jsx"></script>
+<script type="text/babel" src="src/page-shell.jsx"></script>
+<script type="text/babel" src="src/services-page.jsx"></script>
+<script type="text/babel">
+  ReactDOM.createRoot(document.getElementById("root")).render(<ServicesPage />);
+</script>
+</body>
+</html>
