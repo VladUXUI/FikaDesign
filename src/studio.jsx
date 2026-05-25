@@ -23,7 +23,7 @@ function Studio({ motion }) {
           display: "grid", gridTemplateColumns: "1fr 1fr", gap: 96, alignItems: "center",
         }}>
           <div className="studio-copy"><StudioCopy motion={motion} /></div>
-          <div className="studio-photos"><PhotoCluster motion={motion} y={y} /></div>
+          <div className="studio-photos"><PhotoCluster /></div>
         </div>
       </div>
     </section>
@@ -55,37 +55,13 @@ function StudioCopy({ motion }) {
   );
 }
 
-function PhotoCluster({ motion, y }) {
-  const off = motion === "off" ? 0 : 1;
+function PhotoCluster() {
   return (
-    <div style={{ position: "relative", height: 620 }}>
-      {/* Big primary */}
-      <div className="photo studio" style={{
-        position: "absolute", top: 0, left: 40, right: 0, height: 420, borderRadius: 16,
-        transform: `translateY(${y * -0.04 * off}px)`,
-      }}>
-        <div className="grain" />
-        <div className="photo-label">Photo · two screens, morning light</div>
-      </div>
-      {/* Lower-left secondary */}
-      <div className="photo coffee" style={{
-        position: "absolute", bottom: 40, left: 0, width: 280, height: 260, borderRadius: 16,
-        transform: `translateY(${y * -0.09 * off}px)`,
-        boxShadow: "var(--sh-4)",
-      }}>
-        <div className="grain" />
-        <div className="photo-label">Photo · coffee, paper, hands</div>
-      </div>
-      {/* Lower-right small */}
-      <div className="photo hands" style={{
-        position: "absolute", bottom: 0, right: 24, width: 220, height: 200, borderRadius: 16,
-        transform: `translateY(${y * -0.06 * off}px) rotate(${motion === "off" ? 0 : 3}deg)`,
-        boxShadow: "var(--sh-3)",
-      }}>
-        <div className="grain" />
-        <div className="photo-label">Photo · keyboard, late afternoon</div>
-      </div>
-    </div>
+    <img
+      src="uploads/Adina_Vlad Portrait.png"
+      alt="Adina and Vlad — Fika Design Co."
+      style={{ width: "100%", borderRadius: 24, display: "block" }}
+    />
   );
 }
 
