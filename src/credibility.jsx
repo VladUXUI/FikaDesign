@@ -6,12 +6,11 @@ function Credibility({ motion }) {
   const ref = useReveal();
   // Wordmark placeholders set in different display styles for variety
   const logos = [
-    { name: "Spotify",   style: { fontFamily: "var(--font-body)", fontWeight: 700, letterSpacing: "-0.02em", fontSize: 28 } },
-    { name: "Klarna",    style: { fontFamily: "var(--font-display)", fontWeight: 400, fontStyle: "italic", fontSize: 28, fontVariationSettings: "'opsz' 60, 'SOFT' 60" } },
-    { name: "IKEA",      style: { fontFamily: "var(--font-body)", fontWeight: 700, letterSpacing: "0.04em", fontSize: 26 } },
-    { name: "Bonnier",   style: { fontFamily: "var(--font-display)", fontWeight: 500, fontSize: 26, fontVariationSettings: "'opsz' 60, 'SOFT' 40" } },
-    { name: "H&M",       style: { fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 28 } },
-    { name: "Telia",     style: { fontFamily: "var(--font-body)", fontWeight: 500, fontSize: 26, letterSpacing: "-0.01em" } },
+    { name: "Volvo",      style: { fontFamily: "var(--font-body)", fontWeight: 700, letterSpacing: "0.06em", fontSize: 24, textTransform: "uppercase" } },
+    { name: "ING Bank",   style: { fontFamily: "var(--font-body)", fontWeight: 700, letterSpacing: "-0.01em", fontSize: 26 } },
+    { name: "MetaMask",   style: { fontFamily: "var(--font-body)", fontWeight: 600, letterSpacing: "-0.02em", fontSize: 26 } },
+    { name: "Kraken",     style: { fontFamily: "var(--font-body)", fontWeight: 700, letterSpacing: "-0.01em", fontSize: 26 } },
+    { name: "Consensys",  style: { fontFamily: "var(--font-body)", fontWeight: 500, letterSpacing: "-0.02em", fontSize: 26 } },
   ];
   return (
     <section ref={ref} className={"section " + (motion === "off" ? "" : "reveal")}
@@ -43,9 +42,6 @@ function Credibility({ motion }) {
               </span>
             ))}
           </div>
-        </div>
-        <div style={{ marginTop: 28, fontSize: 12, color: "var(--fg-3)", textAlign: "right", letterSpacing: "0.04em" }}>
-          Placeholder — final logos from founders' previous careers
         </div>
       </div>
     </section>
