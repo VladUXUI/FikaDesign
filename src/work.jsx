@@ -407,7 +407,7 @@ function CareerCredibility() {
           lede="Skouta was built by two designers with senior careers at some of Europe's most recognized organizations. Our individual experience spans product design, content strategy, UX writing, and digital product leadership."
           accent="One product."
         />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginTop: 16 }}>
+        <div className="founder-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginTop: 16 }}>
           <FounderCard idx={1} />
           <FounderCard idx={2} />
         </div>

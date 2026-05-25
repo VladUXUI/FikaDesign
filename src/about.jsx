@@ -31,7 +31,7 @@ function StudioStory() {
   return (
     <section id="story" className="section-cream" style={{ paddingTop: 120, paddingBottom: 120 }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 96, alignItems: "flex-start" }}>
+        <div className="story-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 96, alignItems: "flex-start" }}>
           <div style={{ position: "sticky", top: 120 }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>Studio story</div>
             <h2 className="display-md" style={{ marginBottom: 28 }}>
@@ -100,7 +100,7 @@ function TheTeam() {
           lede="Two designers with complementary careers — one in product design, one in content design and UX writing — who built a product together before building a studio."
           accent="One studio."
         />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+        <div className="founder-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
           <FounderCard idx={1} role="Product designer and co-founder" />
           <FounderCard idx={2} role="UX writer, content designer, and co-founder" />
         </div>
@@ -210,7 +210,7 @@ function HowWeWork() {
           lede="These aren't aspirational. They describe how we already work — for ourselves on Skouta, and for the clients we take on."
           accent="every engagement."
         />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 16 }}>
+        <div className="how-we-work-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 16 }}>
           {principles.map((p) => (
             <PrincipleCard key={p.num} {...p} />
           ))}

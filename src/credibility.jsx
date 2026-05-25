@@ -16,7 +16,7 @@ function Credibility({ motion }) {
     <section ref={ref} className={"section " + (motion === "off" ? "" : "reveal")}
              style={{ paddingTop: 100, paddingBottom: 100, background: "var(--fika-paper)" }}>
       <div className="container">
-        <div style={{
+        <div className="credibility-grid" style={{
           display: "grid", gridTemplateColumns: "auto 1fr", gap: 80, alignItems: "center",
         }}>
           <div>

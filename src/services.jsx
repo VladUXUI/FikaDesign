@@ -106,13 +106,13 @@ function ServicesScrollSnap({ motion }) {
             <div className="eyebrow" style={{ marginBottom: 14 }}>What we do</div>
             <h2 className="display-lg">Five services, one senior team.</h2>
           </div>
-          <a href="services.html" className="btn btn-secondary" style={{ flexShrink: 0 }}>
+          <a href="services.html" className="btn btn-secondary services-cta-desktop" style={{ flexShrink: 0 }}>
             Full service detail →
           </a>
         </div>
 
         {/* Stage */}
-        <div className="container" style={{
+        <div className="container services-stage" style={{
           flex: 1, display: "grid", gridTemplateColumns: "minmax(0, 0.5fr) minmax(0, 1.1fr) minmax(0, 1fr)", gap: 56,
           alignItems: "stretch", paddingBottom: 28,
           minHeight: 0,
@@ -143,6 +143,9 @@ function ServicesScrollSnap({ motion }) {
                 }}>{s.title}</span>
               </div>
             ))}
+            <a href="services.html" className="btn btn-secondary services-cta-mobile" style={{ marginTop: 8 }}>
+              Full service detail →
+            </a>
           </div>
 
           {/* Active service text */}

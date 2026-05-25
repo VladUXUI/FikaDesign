@@ -49,6 +49,9 @@ button { font-family: inherit; cursor: pointer; }
 .photo.sage { background: linear-gradient(160deg, #B5B5B5, #5A5A5A); }
 .photo.cream { background: linear-gradient(160deg, #EFEFEF, #BCBCBC); color: var(--gray-900);}
 
+/* Services mobile CTA hidden by default (shown only on mobile) */
+.services-cta-mobile { display: none; }
+
 /* Buttons (used outside the preview cards) */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -85,3 +88,67 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--fika-orange-deep); font-weight: 500;
 }
 .section-ink .eyebrow-mk { color: var(--fika-orange-soft); }
+
+/* ─── Responsive layout ─────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Reduce section vertical padding on mobile */
+  .section { padding: 64px 0; }
+  [style*="paddingTop: 140"], [style*="paddingTop: 160"] { padding-top: 72px !important; }
+
+  /* Skouta: visual on top, text below */
+  .skouta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    margin-top: 40px !important;
+  }
+  .skouta-visual { order: 1; }
+  .skouta-text   { order: 2; }
+
+  /* Phone visual: reduce height, hide annotation pills */
+  .phone-visual-wrap { min-height: 420px !important; }
+  .phone-annotation  { display: none !important; }
+
+  /* Skouta stats: 2 columns instead of 4 */
+  .skouta-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 48px !important;
+  }
+
+  /* Credibility: text on top, logos below */
+  .credibility-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Studio (Who we are): photos on top, copy below */
+  .studio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .studio-photos { order: 1; }
+  .studio-copy   { order: 2; }
+
+  /* Closing CTA: force 2-line headline on small screens */
+  .closing-headline { font-size: 44px !important; }
+
+  /* General 2-col grids → single column */
+  .how-we-work-grid,
+  .founder-grid,
+  .story-grid { grid-template-columns: 1fr !important; }
+
+  /* Story grid: un-sticky the left column on mobile */
+  .story-grid > div:first-child { position: static !important; }
+
+  /* Hero: visual on top, text below */
+  .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .hero-visual { order: 1; }
+  .hero-text { order: 2; }
+
+  /* Services: hide header CTA, show rail CTA; collapse to 2 cols (hide visual) */
+  .services-cta-desktop { display: none !important; }
+  .services-cta-mobile { display: inline-flex !important; }
+  .services-stage { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) !important; }
+  .services-stage > div:last-child { display: none !important; }
+}

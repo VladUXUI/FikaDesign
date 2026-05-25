@@ -92,18 +92,20 @@ function HeroKinetic({ headline, sub, ctas, motion }) {
       position: "relative", overflow: "hidden"
     }}>
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{
+        <div className="hero-grid" style={{
           display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: 64,
           alignItems: "center"
         }}>
-          <div>
+          <div className="hero-text">
             <h1 className="display-xl" style={{ marginBottom: 36 }}>
               <HeadlineKinetic headline={headline} motion={motion} />
             </h1>
             <p className="lede" style={{ maxWidth: 540, marginBottom: 40 }}>{sub}</p>
             {ctas}
           </div>
-          <KineticMark scale={scale} rot={rot} motion={motion} />
+          <div className="hero-visual">
+            <KineticMark scale={scale} rot={rot} motion={motion} />
+          </div>
         </div>
       </div>
     </section>);
@@ -126,18 +128,18 @@ function HeroSkoutaPeek({ headline, sub, ctas, motion }) {
     }}>
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         <HeroMetaRow motion={motion} />
-        <div style={{
+        <div className="hero-grid" style={{
           display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: 64,
           alignItems: "center", marginTop: 56
         }}>
-          <div>
+          <div className="hero-text">
             <h1 className="display-xl" style={{ marginBottom: 36 }}>
               <HeadlineKinetic headline={headline} motion={motion} />
             </h1>
             <p className="lede" style={{ maxWidth: 540, marginBottom: 40 }}>{sub}</p>
             {ctas}
           </div>
-          <div style={{
+          <div className="hero-visual" style={{
             position: "relative", height: 620, display: "flex", justifyContent: "center", alignItems: "center"
           }}>
             <div style={{

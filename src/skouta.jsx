@@ -7,15 +7,15 @@ function SkoutaSection({ skoutaVisual, motion }) {
     <section id="work" ref={ref} className="section section-cream" style={{ paddingTop: 140, paddingBottom: 140, overflow: "hidden" }}>
       <div className="container">
         <SectionHeader motion={motion} />
-        <div style={{
+        <div className="skouta-grid" style={{
           marginTop: 80,
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: 80,
           alignItems: "center",
         }}>
-          <SkoutaText motion={motion} />
-          <SkoutaVisual variant={skoutaVisual} motion={motion} />
+          <div className="skouta-text"><SkoutaText motion={motion} /></div>
+          <div className="skouta-visual"><SkoutaVisual variant={skoutaVisual} motion={motion} /></div>
         </div>
         <SkoutaMeta motion={motion} />
       </div>
@@ -76,7 +76,7 @@ function SkoutaMeta({ motion }) {
     { v: "03", l: "Tabs · Home, Alerts, Profile" },
   ];
   return (
-    <div ref={ref} className={motion === "off" ? "" : "reveal"} style={{
+    <div ref={ref} className={(motion === "off" ? "" : "reveal ") + "skouta-stats"} style={{
       marginTop: 88, borderTop: "1px solid var(--bd-line)", paddingTop: 32,
       display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32,
     }}>
@@ -114,7 +114,7 @@ function PhoneVisual({ motion }) {
     <div style={{
       display: "flex", justifyContent: "center", alignItems: "center", position: "relative",
       minHeight: 720,
-    }}>
+    }} className="phone-visual-wrap">
       {/* Backdrop orange shape */}
       <div style={{
         position: "absolute", width: 360, height: 360,
@@ -138,7 +138,7 @@ function PhoneVisual({ motion }) {
 
 function Annotation({ top, bottom, left, right, text, motion, y, dy }) {
   return (
-    <div style={{
+    <div className="phone-annotation" style={{
       position: "absolute", top, bottom, left, right,
       background: "var(--bg-raised)", border: "1px solid var(--bd-line)",
       borderRadius: 999, padding: "10px 16px",

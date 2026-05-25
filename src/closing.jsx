@@ -26,12 +26,12 @@ function ClosingCTA({ motion }) {
           Working on something?
         </div>
 
-        <h2 style={{
+        <h2 className="closing-headline" style={{
           fontFamily: "var(--font-display)",
-          fontSize: "clamp(64px, 11vw, 180px)",
+          fontSize: "clamp(36px, 8vw, 108px)",
           lineHeight: 0.9, letterSpacing: "-0.035em",
           fontVariationSettings: "'opsz' 144, 'SOFT' 30",
-          margin: 0, color: "white", textWrap: "balance",
+          margin: 0, color: "white",
           transform: `translateY(${headlineY}px)`,
           willChange: "transform",
         }}>

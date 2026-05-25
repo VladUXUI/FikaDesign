@@ -19,13 +19,11 @@ function Studio({ motion }) {
       }} />
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{
+        <div className="studio-grid" style={{
           display: "grid", gridTemplateColumns: "1fr 1fr", gap: 96, alignItems: "center",
         }}>
-          {/* Left — text */}
-          <StudioCopy motion={motion} />
-          {/* Right — documentary photo cluster with parallax */}
-          <PhotoCluster motion={motion} y={y} />
+          <div className="studio-copy"><StudioCopy motion={motion} /></div>
+          <div className="studio-photos"><PhotoCluster motion={motion} y={y} /></div>
         </div>
       </div>
     </section>
