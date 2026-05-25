@@ -31,7 +31,7 @@ function Nav() {
     <>
       <nav className="site-nav" data-scrolled={scrolled ? "true" : "false"} data-open={open ? "true" : "false"}>
         <div className="container nav-row">
-          <a href="#top" className="nav-logo" aria-label="Fika Design Co.">
+          <a href="index.html" className="nav-logo" aria-label="Fika Design Co.">
             <img src="assets/FikaLogo.svg" alt="" />
             <span>Fika Design Co.</span>
           </a>

@@ -413,6 +413,7 @@ function SkoutaPhonePreview() {
             shape="rounded"
             radius="74"
             fit="cover"
+            src="uploads/Simulator Screenshot - iPhone 17 Pro - 2026-05-25 at 10.03.23.png"
             placeholder="Drop the Skouta screenshot"
             style={{
               width: "100%", height: "100%",
