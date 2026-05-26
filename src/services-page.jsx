@@ -138,7 +138,7 @@ function IndexRow({ service }) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <a href={"#" + service.id} style={{
+      <a href={"#" + service.id} className="service-index-row" style={{
         display: "grid",
         gridTemplateColumns: "60px minmax(0, 1.2fr) minmax(0, 1.8fr) 40px",
         gap: 32, alignItems: "baseline",
@@ -158,7 +158,7 @@ function IndexRow({ service }) {
         }}>
           {service.title}
         </span>
-        <span style={{ fontSize: 16, lineHeight: 1.5, color: "var(--fg-2)", maxWidth: 540 }}>
+        <span className="service-index-summary" style={{ fontSize: 16, lineHeight: 1.5, color: "var(--fg-2)", maxWidth: 540 }}>
           {service.summary}
         </span>
         <span style={{
@@ -183,7 +183,7 @@ function ServiceSection({ service }) {
     <section id={service.id} className={bg} style={{ paddingTop: 140, paddingBottom: 140, position: "relative" }}>
       <div className="container">
         {/* Header */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, marginBottom: 64 }}>
+        <div className="service-section-header" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, marginBottom: 64 }}>
           <div>
             <div className="eyebrow" style={{ marginBottom: 18 }}>Service {service.num}</div>
             <h2 className="display-lg" style={{
@@ -207,7 +207,7 @@ function ServiceSection({ service }) {
         </div>
 
         {/* Body */}
-        <div style={{
+        <div className="service-section-body" style={{
           display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 80,
           alignItems: "flex-start", paddingTop: 56, borderTop: bg === "section-ink" ? "1px solid rgba(255,255,255,0.18)" : "1px solid var(--bd-line)",
         }}>
@@ -252,7 +252,7 @@ function Deliverables({ items, darkBg }) {
 
 function GoodForCard({ items, darkBg }) {
   return (
-    <aside style={{
+    <aside className="good-for-sticky" style={{
       padding: 32, borderRadius: 20,
       background: darkBg ? "rgba(255,255,255,0.04)" : "var(--bg-raised)",
       border: "1px solid " + (darkBg ? "rgba(255,255,255,0.14)" : "var(--bd-line)"),

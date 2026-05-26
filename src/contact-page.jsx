@@ -31,12 +31,12 @@ function ContactSection() {
   return (
     <section className="section-cream" style={{ paddingTop: 80, paddingBottom: 120 }}>
       <div className="container">
-        <div style={{
+        <div className="contact-grid" style={{
           display: "grid", gridTemplateColumns: "1fr 1fr", gap: 96,
           alignItems: "flex-start",
         }}>
           {/* Left — intro + working notes */}
-          <div style={{ position: "sticky", top: 120 }}>
+          <div className="contact-sticky" style={{ position: "sticky", top: 120 }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>Before you write</div>
             <h2 className="display-md" style={{ marginBottom: 28 }}>
               Tell us what you're <span className="wonk-italic" style={{ color: "var(--fika-orange-deep)" }}>building</span>.
@@ -99,7 +99,7 @@ function ContactForm() {
       borderRadius: 24, padding: 40,
       display: "flex", flexDirection: "column", gap: 32,
     }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+      <div className="contact-name-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
         <Field id="name" label="Name" placeholder="Your full name" required />
         <Field id="company" label="Company (optional)" placeholder="Where you work" />
       </div>

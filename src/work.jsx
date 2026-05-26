@@ -84,7 +84,7 @@ function SkoutaCaseStudy() {
             <span className="wonk-italic" style={{ color: "var(--fika-orange-deep)" }}>in Sweden</span>.
           </h2>
           {/* Project facts strip */}
-          <div style={{
+          <div className="project-facts-strip" style={{
             display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32,
             marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--bd-line)",
           }}>
@@ -105,12 +105,12 @@ function SkoutaCaseStudy() {
         </div>
 
         {/* Spec rail + narrative */}
-        <div style={{
+        <div className="case-study-grid" style={{
           display: "grid", gridTemplateColumns: "260px 1fr", gap: 96,
           alignItems: "flex-start",
         }}>
           {/* Sticky chapter rail */}
-          <aside style={{ position: "sticky", top: 120, alignSelf: "flex-start" }}>
+          <aside className="case-study-rail" style={{ position: "sticky", top: 120, alignSelf: "flex-start" }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>Case study</div>
             <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {CHAPTERS.map((c) => {
@@ -267,7 +267,7 @@ function ServicesApplied() {
       <div className="eyebrow" style={{ marginBottom: 12 }}>Services applied</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {items.map((x, i) => (
-          <li key={i} style={{
+          <li key={i} className="services-applied-row" style={{
             borderTop: "1px solid var(--bd-line)",
             padding: "20px 0",
             display: "grid", gridTemplateColumns: "200px 1fr", gap: 32,
@@ -328,7 +328,7 @@ function Sources() {
   return (
     <div style={{ marginTop: 32, padding: 28, background: "var(--fika-paper)", border: "1px solid var(--bd-line)", borderRadius: 18 }}>
       <div className="eyebrow" style={{ marginBottom: 16 }}>Eight official data sources</div>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px 24px" }}>
+      <ul className="sources-grid" style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px 24px" }}>
         {sources.map((s, i) => (
           <li key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, paddingBottom: 10, borderBottom: "1px solid var(--bd-hair)" }}>
             <span style={{ fontSize: 15, fontWeight: 500, color: "var(--fika-espresso)", letterSpacing: "-0.005em" }}>{s.name}</span>

@@ -151,4 +151,23 @@ button { font-family: inherit; cursor: pointer; }
   .services-cta-mobile { display: inline-flex !important; }
   .services-stage { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) !important; }
   .services-stage > div:last-child { display: none !important; }
+
+  /* Work page */
+  .project-facts-strip { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+  .case-study-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .case-study-rail { display: none !important; }
+  .services-applied-row { grid-template-columns: 1fr !important; gap: 6px !important; }
+  .sources-grid { grid-template-columns: 1fr !important; }
+
+  /* Services page */
+  .service-index-row { grid-template-columns: 48px 1fr 32px !important; gap: 16px !important; }
+  .service-index-summary { display: none !important; }
+  .service-section-header { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .service-section-body { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .good-for-sticky { position: static !important; }
+
+  /* Contact page */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .contact-sticky { position: static !important; }
+  .contact-name-row { grid-template-columns: 1fr !important; }
 }
