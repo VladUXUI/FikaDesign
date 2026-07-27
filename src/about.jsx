@@ -38,10 +38,6 @@ function StudioStory() {
               We moved to Sweden. We built something we needed. Then we decided to do the{" "}
               <span className="wonk-italic" style={{ color: "var(--fika-orange-deep)" }}>same</span> for others.
             </h2>
-            <div className="photo studio" style={{ aspectRatio: "4/5", borderRadius: 16, marginTop: 32 }}>
-              <div className="grain" />
-              <div className="photo-label">Photo · workspace, morning</div>
-            </div>
           </div>
           <div style={{ maxWidth: 680 }}>
             <Para>

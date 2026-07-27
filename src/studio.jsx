@@ -56,12 +56,40 @@ function StudioCopy({ motion }) {
 }
 
 function PhotoCluster() {
+  const cardBase = {
+    position: "absolute",
+    width: "62%",
+    aspectRatio: "1 / 1",
+    borderRadius: 24,
+    overflow: "hidden",
+    border: "1px solid rgba(250,250,250,0.14)",
+    boxShadow: "0 30px 60px -20px rgba(0,0,0,0.55)",
+    background: "var(--fika-espresso)",
+  };
+  const imgStyle = {
+    width: "100%", height: "100%", objectFit: "cover", display: "block",
+  };
   return (
-    <img
-      src="uploads/Adina_Vlad Portrait.png"
-      alt="Adina and Vlad — Fika Design Co."
-      style={{ width: "100%", borderRadius: 24, display: "block" }}
-    />
+    <div style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}>
+      {/* Adina — back, upper left, tilted left */}
+      <div style={{
+        ...cardBase,
+        top: "2%", left: "0%",
+        transform: "rotate(-6deg)",
+        zIndex: 1,
+      }}>
+        <img src="uploads/Adina_avatar.png" alt="Adina Cretu — Fika Design Co." style={imgStyle} />
+      </div>
+      {/* Vlad — front, lower right, tilted right */}
+      <div style={{
+        ...cardBase,
+        bottom: "2%", right: "0%",
+        transform: "rotate(5deg)",
+        zIndex: 2,
+      }}>
+        <img src="uploads/Vlad_Avatar.png" alt="Vlad Todirut — Fika Design Co." style={imgStyle} />
+      </div>
+    </div>
   );
 }
 
