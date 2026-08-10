@@ -1,0 +1,8 @@
+/* Global site styles are imported via layout.jsx (assets/site.css chain). */
+html,
+body {
+  overflow-x: clip;
+}
+body {
+  background: var(--bg-page);
+}
