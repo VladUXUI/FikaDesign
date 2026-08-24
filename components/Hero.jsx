@@ -160,7 +160,7 @@ function HeroSkoutaPeek({ headline, sub, ctas, motion }) {
               fontSize: 12, fontWeight: 600, letterSpacing: "0.04em", boxShadow: "var(--sh-3)",
               transform: motion === "off" ? "none" : `translateY(${y * -0.05}px)`
             }}>
-              Skouta · iOS first, Android soon
+              Skouta · Live on iOS, Android soon
             </div>
           </div>
         </div>

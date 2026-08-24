@@ -3,7 +3,7 @@
 import React from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
-import { PageHero, Placeholder, SectionHeading } from "./PageShell";
+import { PageHero, SectionHeading } from "./PageShell";
 
 const { useState: workUseState, useEffect: workUseEffect, useRef: workUseRef } = React;
 
@@ -36,7 +36,7 @@ function WorkHero() {
       eyebrow="Our work"
       title="Know your ground."
       lede="Skouta is a civic access tool for everyone living in Sweden — conceived, designed, and shipped by Fika Design Co. One product, end-to-end, with full accountability for every decision."
-      meta="Skouta · iOS first"
+      meta="Skouta · Live on the App Store"
       accent="ground."
     />
   );
@@ -81,13 +81,25 @@ function SkoutaCaseStudy() {
               padding: "8px 14px", borderRadius: 999, background: "var(--fika-espresso)", color: "white",
               fontSize: 11.5, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase",
             }}>Skouta</span>
-            <span className="meta" style={{ color: "var(--fg-3)" }}>iOS first · Android soon · App Store</span>
+            <span className="meta" style={{ color: "var(--fg-3)" }}>Live on iOS</span>
           </div>
           <h2 className="display-xl" style={{ marginBottom: 32 }}>
             A civic access tool<br />
             for everyone living{" "}
             <span className="wonk-italic" style={{ color: "var(--fika-orange-deep)" }}>in Sweden</span>.
           </h2>
+          {/* Live App Store link */}
+          <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
+            <a
+              href="https://apps.apple.com/us/app/skouta-know-your-ground/id6783809892"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Download on the App Store
+            </a>
+            <span className="meta" style={{ color: "var(--fg-3)" }}>Android coming soon</span>
+          </div>
           {/* Project facts strip */}
           <div className="project-facts-strip" style={{
             display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32,
@@ -95,9 +107,9 @@ function SkoutaCaseStudy() {
           }}>
             {[
               { k: "Role", v: "Founder-led product" },
-              { k: "Platform", v: "iOS first, Android to follow" },
+              { k: "Platform", v: "iOS, Android to follow" },
               { k: "Services applied", v: "Product, content, UX writing, context engineering" },
-              { k: "Status", v: <Placeholder label="iOS launch · Q3 2026 · Android shortly after" /> },
+              { k: "Status", v: "Live on the App Store · Android coming soon" },
             ].map((x, i) => (
               <div key={i}>
                 <div className="meta" style={{ color: "var(--fg-3)", marginBottom: 10 }}>{x.k}</div>
@@ -161,7 +173,7 @@ function SkoutaCaseStudy() {
                 Sweden has 2.1 million foreign-born residents — about 21% of the population. Its public alert infrastructure is authoritative, well-maintained, and almost entirely in Swedish. For the roughly 1.2 million English-comfortable residents who live here without fluent Swedish, that’s not a gap. It’s a wall.
               </p>
               <p>
-                Skouta is a civic access tool that removes that wall. A real-time mobile application — launching on iOS first, with Android shortly after — that aggregates official Swedish government alerts and delivers them in English, accurately, with full source attribution, and without editorializing.
+                Skouta is a civic access tool that removes that wall. A real-time mobile application — live on iOS, with Android to follow — that aggregates official Swedish government alerts and delivers them in English, accurately, with full source attribution, and without editorializing.
               </p>
               <p>
                 The tagline says it directly: <strong>Know your ground.</strong> Not a feature description. A feeling of presence, belonging, and awareness in the place you chose to live.
@@ -195,7 +207,7 @@ function SkoutaCaseStudy() {
 
             <Chapter id="built" num="04" title="What we built" sectionRefs={sectionRefs}>
               <p style={{ marginBottom: 24 }}>
-                A three-tab mobile application aggregating real-time alerts from eight official Swedish government data sources, translated into English and delivered with full source attribution. Built iOS-first with Android following shortly after launch. The product includes:
+                A three-tab mobile application aggregating real-time alerts from eight official Swedish government data sources, translated into English and delivered with full source attribution. Built iOS-first and now live on the App Store, with Android to follow. The product includes:
               </p>
               <FeatureList />
               <PipCard />
@@ -424,14 +436,14 @@ function CareerCredibility() {
 const FOUNDERS = {
   1: {
     name: "Vlad Todirut",
-    avatar: "uploads/Vlad_Avatar.png",
+    avatar: "/Vlad_Avatar.png",
     role: "Product designer and co-founder",
     linkedin: "https://www.linkedin.com/in/vladtodirut/",
     bio: "Sixteen years of product design across fintech and Web3 — at companies including Consensys, MetaMask, Thesis, and Mezo. At Fika, he leads product design end-to-end: IA, interaction systems, visual design, and production. On Skouta, he shaped every screen from first concept to the App Store.",
   },
   2: {
     name: "Adina Cretu",
-    avatar: "uploads/Adina_avatar.png",
+    avatar: "/Adina_avatar.png",
     role: "UX writer, content designer, and co-founder",
     linkedin: "https://se.linkedin.com/in/adinacretu",
     bio: "A content designer and UX writer working at the intersection of language, interaction, and adaptive technology — currently at Volvo Group, designing digital product content at scale. Her specialisms include conversation design and generative AI. At Fika and on Skouta, she owns all content design, UX writing, and the editorial voice.",
