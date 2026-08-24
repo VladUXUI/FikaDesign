@@ -25,7 +25,7 @@ function AboutHero() {
     <PageHero
       eyebrow="About"
       title="A studio that ships."
-      lede="Fika Design Co. AB is a Sweden-based product design studio founded by two designers who built Skouta — a live app launching iOS-first, with Android soon after — and now bring the same standard of work to clients."
+      lede="Fika Design Co. AB is a Sweden-based product design studio founded by two designers who built and shipped Skouta — live on the App Store, with Android coming soon — and now bring the same standard of work to clients."
       meta="Founded 2026 · AB"
       accent="ships."
     />
@@ -113,13 +113,13 @@ function TheTeam() {
 const FOUNDERS = {
   1: {
     name: "Vlad Todirut",
-    avatar: "uploads/Vlad_Avatar.png",
+    avatar: "/Vlad_Avatar.png",
     linkedin: "https://www.linkedin.com/in/vladtodirut/",
     bio: "Sixteen years of product design across fintech and Web3 — at companies including Consensys, MetaMask, Thesis, and Mezo. At Fika, he leads product design end-to-end: IA, interaction systems, visual design, and production. On Skouta, he shaped every screen from first concept to the App Store.",
   },
   2: {
     name: "Adina Cretu",
-    avatar: "uploads/Adina_avatar.png",
+    avatar: "/Adina_avatar.png",
     linkedin: "https://se.linkedin.com/in/adinacretu",
     bio: "A content designer and UX writer working at the intersection of language, interaction, and adaptive technology — currently at Volvo Group, designing digital product content at scale. Her specialisms include conversation design and generative AI. At Fika and on Skouta, she owns all content design, UX writing, and the editorial voice.",
   },

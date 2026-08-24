@@ -56,7 +56,7 @@ function SkoutaText({ motion }) {
           background: "var(--fika-espresso)", color: "white",
           fontSize: 11.5, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
         }}>Skouta</span>
-        <span className="meta" style={{ color: "var(--fg-3)" }}>iOS first · Android soon · 2026</span>
+        <span className="meta" style={{ color: "var(--fg-3)" }}>Live on iOS · Android coming soon · 2026</span>
       </div>
       <h3 className="display-md" style={{ marginBottom: 16 }}>
         Know your <span className="wonk-italic" style={{ color: "var(--fika-orange-deep)" }}>ground</span>.
